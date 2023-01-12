@@ -38,13 +38,16 @@ describe("Add Two Numbers", function(){
     })
   })
   //Test 5
-  it("returns the result not equal to 15", function(body){
+  it("returns the result not equal to 15", function(done){
     request(url, function(error, response, body){
       body = JSON.parse(body)
       expect(body.result).to.not.equal(15)
       done()
     })
   })
+})
+describe("Add Two Numbers", function(){
+  var url = "http://localhost:1336/addTwoNumbers/a/b"
   //Test 6
   it("should not return status 200", function(done){
     request(url, function(error, response, body){
